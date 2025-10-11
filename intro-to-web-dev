@@ -1,0 +1,69 @@
+1. Frontend, Backend, and Full-Stack Development
+
+Web development can be divided into three major parts — frontend, backend, and full-stack development.
+The frontend refers to the part of a website that users directly see and interact with. It includes everything visible on the browser such as layout, buttons, text, colors, and navigation menus. Technologies commonly used in frontend development are HTML, CSS, and JavaScript, along with modern frameworks like React or Angular. For example, when you visit an online store, the product listings, images, and “Add to Cart” buttons are all part of the frontend.
+
+The backend is the hidden part of a website that handles logic, database management, and communication between the server and the client. It ensures that data entered by users is processed correctly and stored securely. Backend development involves technologies like Node.js, Python, Java, PHP, and databases such as MySQL or MongoDB. For instance, when you place an order on an e-commerce site, the backend processes your order details and stores them in a database.
+
+A full-stack developer is someone who can handle both frontend and backend development. They are capable of designing user interfaces, building server-side logic, and managing databases — essentially developing the entire web application from start to finish. For example, a full-stack developer can create both the product page you see and the backend system that updates inventory or processes payments.
+
+2. The client (browser) sends an HTTP request to the server.
+The server processes it and sends back the requested data or web page.
+
+3. How a Browser Requests and Displays a Web Page
+
+The user enters a URL (e.g., https://example.com).
+The browser sends an HTTP request to the web server.
+The server locates the requested page (like index.html).
+The server sends back an HTTP response containing HTML, CSS, and JavaScript
+The browser’s rendering engine parses and displays the page visually.
+Additional assets (images, videos, scripts) are loaded as needed.
+
+4. Tool	Purpose
+Code Editor (VS Code)	Write and manage code efficiently.
+Web Browser (Chrome, Edge)	Test and debug web pages.
+Version Control (Git + GitHub)	Track changes and collaborate on code.
+Package Manager (npm/yarn)	Manage JavaScript libraries and dependencies.
+Local Server (XAMPP, Node.js)	Run backend code locally before deployment.
+
+5. A web server is software that delivers web pages to users over the internet when requested through a browser.
+
+Examples
+Apache HTTP Server
+Nginx
+Microsoft IIS
+Node.js Express
+LiteSpeed
+Example: When you open www.google.com, Google’s web servers deliver the web page to your browser.
+
+6. Role	Responsibility
+Frontend Developer	Designs and builds the user interface using HTML, CSS, and JS. Ensures responsiveness and interactivity.
+Backend Developer	Handles server logic, APIs, authentication, and database connections.
+Database Administrator (DBA)	Manages and secures the database, optimizes queries, and ensures data consistency and backups.
+
+7. Steps:
+Download and install Visual Studio Code from https://code.visualstudio.com
+Install extensions:
+Live Server (for running HTML files)
+Prettier (for code formatting)
+HTML CSS Support and JavaScript (ES6)
+Create a folder → open in VS Code → create files index.html, style.css, script.js.
+
+
+8. Type	Description	Example
+Static Website	Displays fixed content — same for every user. No backend processing.	A portfolio website built only with HTML & CSS.
+Dynamic Website	Content changes based on user interaction or data from a database.	An e-commerce site where products and prices update dynamically.
+
+9. Browser	Rendering Engine	Description
+Google Chrome	Blink	Fast and optimized for JavaScript.
+Mozilla Firefox	Gecko	Open-source and highly customizable.
+Microsoft Edge	Blink	Same engine as Chrome after 2020 update.
+Safari	WebKit	Used primarily in Apple devices.
+Opera	Blink	Includes built-in VPN and ad-blocker.
+
+10. Flow Explanation:
+
+The client sends a request (via browser).
+The web server processes it and interacts with the database if needed.
+Data is sent back via APIs.
+The browser displays the final content to the user.
