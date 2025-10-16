@@ -1,0 +1,70 @@
+/* Reset default margins/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* Header */
+header {
+    background-color: #8b7d7d;
+    color: white;
+    padding: 10px 20px;
+}
+
+header h1 {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: wheat;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Container */
+.container {
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+}
+
+/* Main content */
+main {
+    flex: 3;
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+/* Aside */
+aside {
+    flex: 1;
+    border: 1px solid #ccc;
+    background-color: #8b7d7d;
+    padding: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+}
