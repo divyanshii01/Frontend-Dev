@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Dashboard Grid</title>
+<style>
+body{margin:0;font-family:sans-serif;display:grid;grid-template-columns:200px 1fr;grid-template-rows:60px 1fr;grid-template-areas:
+"header header" "sidebar main";height:100vh;gap:10px;padding:10px;background:#f1f5f9;}
+header{grid-area:header;background:#0ea5e9;color:white;display:flex;align-items:center;padding:0 1rem;}
+aside{grid-area:sidebar;background:white;padding:1rem;}
+main{grid-area:main;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:1rem;}
+.box{background:white;display:flex;align-items:center;justify-content:center;border:1px solid #ddd;transition:.3s;}
+.box:hover{transform:scale(1.05);box-shadow:0 4px 10px rgba(0,0,0,.1);}
+.box.wide{grid-column:span 2;}
+</style>
+</head>
+<body>
+<header>Dashboard Header</header>
+<aside><ul><li>Home</li><li>Reports</li><li>Settings</li></ul></aside>
+<main>
+  <div class="box">Box 1</div>
+  <div class="box">Box 2</div>
+  <div class="box wide">Wide Box</div>
+  <div class="box">Box 4</div>
+</main>
+</body>
+</html>

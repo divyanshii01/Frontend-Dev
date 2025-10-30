@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Homepage Flex</title>
+<style>
+body{margin:0;font-family:Arial;display:flex;flex-direction:column;min-height:100vh;}
+header,footer{background:#0d9488;color:white;padding:1rem;}
+header nav{display:flex;justify-content:space-around;}
+main{flex:1;display:flex;justify-content:center;align-items:center;gap:1rem;flex-wrap:wrap;}
+.box{background:#e0f2fe;padding:2rem;width:200px;text-align:center;transition:transform .3s;}
+.box:hover{transform:rotate(2deg);}
+footer{text-align:center;margin-top:auto;}
+</style>
+</head>
+<body>
+<header><nav><a href="#">Home</a><a href="#">Services</a><a href="#">Projects</a><a href="#">Contact</a></nav></header>
+<main>
+  <div class="box">Services</div>
+  <div class="box">Projects</div>
+  <div class="box">Contact</div>
+</main>
+<footer>© 2025 All rights reserved</footer>
+</body>
+</html>

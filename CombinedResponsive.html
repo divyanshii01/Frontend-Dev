@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Combined Layout</title>
+<style>
+body{margin:0;font-family:sans-serif;display:flex;flex-direction:column;min-height:100vh;}
+header{display:flex;justify-content:space-between;align-items:center;background:#2563eb;color:white;padding:1rem;}
+header h1{animation:slideIn 1s ease;}
+main{flex:1;display:grid;grid-template-columns:2fr 1fr;gap:1rem;padding:1rem;}
+.article{display:flex;flex-direction:column;gap:1rem;}
+.article .boxes{display:flex;gap:1rem;}
+.box{flex:1;background:#eff6ff;padding:1rem;text-align:center;}
+.sidebar{background:#f1f5f9;padding:1rem;}
+footer{text-align:center;background:#1e3a8a;color:white;padding:.5rem;}
+@keyframes slideIn{from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:none;}}
+@media(max-width:800px){main{grid-template-columns:1fr;}.article .boxes{flex-direction:column;}}
+</style>
+</head>
+<body>
+<header>
+  <h1>MySite</h1>
+  <nav><a href="#" style="color:white;margin:0 10px;">Home</a><a href="#" style="color:white;margin:0 10px;">About</a><a href="#" style="color:white;margin:0 10px;">Contact</a></nav>
+</header>
+<main>
+  <article class="article">
+    <h2>Welcome</h2>
+    <div class="boxes">
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box">Box 3</div>
+    </div>
+  </article>
+  <aside class="sidebar">
+    <h3>Sidebar</h3>
+    <p>Some useful links or news here.</p>
+  </aside>
+</main>
+<footer>© 2025 MySite</footer>
+</body>
+</html>

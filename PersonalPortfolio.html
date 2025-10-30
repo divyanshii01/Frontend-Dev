@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Flexbox</title>
+<style>
+  body{margin:0;font-family:Arial,Helvetica,sans-serif;display:flex;flex-direction:column;min-height:100vh;}
+  header,footer{background:#1e293b;color:white;padding:1rem;}
+  header{display:flex;justify-content:space-between;align-items:center;}
+  nav a{color:white;margin-left:1rem;text-decoration:none;}
+  main{flex:1;display:flex;justify-content:center;align-items:center;gap:2rem;padding:2rem;}
+  .about{flex:1;}
+  .photo img{width:100%;max-width:300px;border-radius:10px;}
+  footer{text-align:center;}
+  @media(max-width:700px){
+    main{flex-direction:column;}
+    header{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Your Name</h1>
+  <nav><a href="#">Home</a><a href="#">About</a><a href="#">Contact</a></nav>
+</header>
+<main>
+  <section class="about"><h2>About Me</h2><p>I’m a web developer passionate about design and code.</p></section>
+  <section class="photo"><img src="https://via.placeholder.com/300" alt="Profile"></section>
+</main>
+<footer>© 2025 Your Name</footer>
+</body>
+</html>
