@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f0f0;
+}
+
+.rotate-box {
+  width: 150px;
+  height: 150px;
+  background-color: orange;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  transition: transform 0.6s ease;
+}
+
+/* Rotate on hover */
+.rotate-box:hover {
+  transform: rotate(45deg);
+}

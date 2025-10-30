@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Team</title>
+<style>
+  body{font-family:Verdana, Geneva, sans-serif;display:flex;flex-direction:column;min-height:100vh;margin:0;padding:2rem;background:#f7fafc}
+  .team{display:flex;gap:1rem;justify-content:center;align-items:flex-start}
+  .card{flex:1;max-width:320px;padding:1rem;margin:0;border:2px solid #e2e8f0;border-radius:12px;box-shadow:0 6px 12px rgba(10,10,20,0.06);background:white;display:flex;flex-direction:column;gap:.5rem}
+  .card h3{margin:0;font-size:1.1rem}
+  .card p{margin:0 0 .5rem 0;flex:1}
+  .lead{background:#fff7ed;border-color:#ffb366;box-shadow:0 8px 20px rgba(255,150,30,0.09)}
+  .controls{width:100%;display:flex;justify-content:center;margin-bottom:1rem}
+  @media(max-width:600px){.team{flex-direction:column;align-items:stretch}}
+</style>
+</head>
+<body>
+  <h1 style="text-align:center">Our Team</h1>
+  <div class="team">
+    <article class="card lead">
+      <h3>Alex Kumar — Team Lead</h3>
+      <small>Role: Product Manager</small>
+      <p>Leads product strategy and coordinates the team to deliver timely features.</p>
+    </article>
+
+    <article class="card">
+      <h3>Priya Singh</h3>
+      <small>Role: Designer</small>
+      <p>Focuses on UI/UX and design systems to ensure usability and accessibility.</p>
+    </article>
+
+    <article class="card">
+      <h3>Rohan Patel</h3>
+      <small>Role: Developer</small>
+      <p>Builds front-end components and ensures the application is responsive and fast.</p>
+    </article>
+  </div>
+</body>
+</html>

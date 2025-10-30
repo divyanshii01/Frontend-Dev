@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>About a City</title>
+<style>
+  *{box-sizing:border-box;margin:0}
+  body{font-family:Arial,Helvetica,sans-serif;color:#112;line-height:1.5}
+  header{background:#0b3b5c;color:white;padding:1rem;position:sticky;top:0;z-index:10}
+  nav a{color:white;margin-right:1rem;text-decoration:none}
+  main section{min-height:60vh;display:flex;align-items:center;padding:4rem;border-bottom:6px solid rgba(0,0,0,0.06)}
+  .hero{background-image:url('https://picsum.photos/id/1011/2000/1200');background-size:cover;background-position:center;background-attachment:fixed;color:white}
+  .history{background:linear-gradient(135deg,#f7b267 0%,#f79d84 100%)}
+  .culture{background:radial-gradient(circle at 10% 20%, #8ec5ff, #e0c3fc)}
+  .parks{background-image:url('https://picsum.photos/id/1018/1600/900');background-size:cover;background-position:center;background-attachment:fixed}
+  section > .content{background:rgba(255,255,255,0.85);padding:2rem;border-radius:8px;max-width:900px;margin:auto}
+  h1{font-size:2.25rem;font-weight:700;margin-bottom:.5rem}
+  h2{font-size:1.5rem;font-weight:600}
+  @media(max-width:700px){main section{padding:2rem}}
+</style>
+</head>
+<body>
+  <header>
+    <h1>City Name</h1>
+    <nav><a href="#hero">Home</a><a href="#history">History</a><a href="#culture">Culture</a><a href="#parks">Parks</a></nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="content"><h1>Welcome to City Name</h1><p>Short intro about the city.</p></div>
+    </section>
+
+    <section id="history" class="history">
+      <div class="content"><h2>History</h2><p>Historic details with padding and border <span style="display:block;margin-top:1rem;border-left:6px solid rgba(0,0,0,.1);padding-left:1rem">This content sits inside a box with spacing.</span></p></div>
+    </section>
+
+    <section id="culture" class="culture">
+      <div class="content"><h2>Culture</h2><p>Talk about festivals, cuisine, arts. Headings use different font sizes and weights.</p></div>
+    </section>
+
+    <section id="parks" class="parks">
+      <div class="content"><h2>Parks & Nature</h2><p>Parallax-like fixed background attachment effect here too.</p></div>
+    </section>
+  </main>
+
+  <footer style="padding:1rem;text-align:center;background:#f2f2f2;border-top:1px solid #ddd">© City Info</footer>
+</body>
+</html>
