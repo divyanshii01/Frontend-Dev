@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Q2 - Employee Dashboard</title>
+  <style>
+    table { border-collapse: collapse; width: 100%; }
+    td, th { border: 1px solid #ddd; padding: 8px; }
+    .active { color: green; font-weight: bold; }
+    .inactive { color: red; font-weight: bold; }
+    .error { color: darkred; margin-top:10px; }
+  </style>
+</head>
+<body>
+  <h2>Employee Status Dashboard</h2>
+  <table id="empTable">
+    <thead><tr><th>Name</th><th>Status</th><th>Toggle</th></tr></thead>
+    <tbody></tbody>
+  </table>
+  <div id="message" class="error"></div>
+
+  <script>
+    const API = 'http://localhost:3002/employees';
+
+    function fetchEmployees() {
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', API);
+      xhr.onload = function() {
+        if (xhr.status >= 200 && xhr.status < 300) {
+          const employees = JSON.parse(xhr.responseText);
+          renderTable(employees);
+        } else {
+          document.getElementById('message').textContent = 'Failed to load employees.';
+        }
+      };
+      xhr.onerror = () => document.getElementById('message').textContent = 'Network error.';
+      xhr.send();
+    }
+
+    function renderTable(list) {
+      const tbody = document.querySelector('#empTable tbody');
+      tbody.innerHTML = '';
+      list.forEach(emp => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${emp.name}</td>
+          <td class="${emp.status}">${emp.status}</td>
+          <td><label><input type="checkbox" ${emp.status === 'active' ? 'checked' : ''}></label></td>
+        `;
+        const checkbox = tr.querySelector('input[type="checkbox"]');
+        checkbox.addEventListener('change', function() {
+          const oldStatus = emp.status;
+          const newStatus = this.checked ? 'active' : 'inactive';
+          // Immediately update UI
+          tr.querySelector('td:nth-child(2)').textContent = newStatus;
+          tr.querySelector('td:nth-child(2)').className = newStatus;
+          // Send PATCH
+          const patchXhr = new XMLHttpRequest();
+          patchXhr.open('PATCH', `${API}/${emp.id}`);
+          patchXhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+          patchXhr.onload = function() {
+            if (!(patchXhr.status >= 200 && patchXhr.status < 300)) {
+              // revert UI and show error
+              tr.querySelector('td:nth-child(2)').textContent = oldStatus;
+              tr.querySelector('td:nth-child(2)').className = oldStatus;
+              checkbox.checked = oldStatus === 'active';
+              document.getElementById('message').textContent = 'Failed to update status. Reverted.';
+            } else {
+              document.getElementById('message').textContent = '';
+              emp.status = newStatus; // update local model
+            }
+          };
+          patchXhr.onerror = function() {
+            // revert UI on network error
+            tr.querySelector('td:nth-child(2)').textContent = oldStatus;
+            tr.querySelector('td:nth-child(2)').className = oldStatus;
+            checkbox.checked = oldStatus === 'active';
+            document.getElementById('message').textContent = 'Network error. Reverted.';
+          };
+          patchXhr.send(JSON.stringify({ status: newStatus }));
+        });
+        tbody.appendChild(tr);
+      });
+    }
+
+    fetchEmployees();
+  </script>
+</body>
+</html>
