@@ -1,0 +1,14 @@
+{
+  "students": [
+    {
+      "id": "13ed",
+      "name": "Rohit Kumar",
+      "section": "B",
+      "result": {
+        "maths": 80,
+        "science": 75,
+        "english": 96
+      }
+    }
+  ]
+}

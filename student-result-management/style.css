@@ -1,0 +1,189 @@
+/* ---------------- ROOT THEME COLORS ---------------- */
+:root {
+  --bg: #eef1ff;
+  --card: #ffffff;
+  --primary: #4b5bfd;
+  --primary-dark: #3646e0;
+  --text: #333;
+  --shadow-light: rgba(255, 255, 255, 0.7);
+  --shadow-dark: rgba(0, 0, 0, 0.15);
+}
+
+/* ---------------- BASE STYLING ---------------- */
+body {
+  margin: 0;
+  padding: 20px;
+  background: var(--bg);
+  font-family: "Poppins", Arial, sans-serif;
+  color: var(--text);
+}
+
+/* Center container */
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 22px;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+/* ---------------- FORM CARD ---------------- */
+.form-section {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 16px;
+
+  /* Neumorphism effect */
+  box-shadow:
+    8px 8px 20px var(--shadow-dark),
+    -5px -5px 15px var(--shadow-light);
+
+  transition: 0.3s ease;
+}
+
+.form-section:hover {
+  box-shadow:
+    4px 4px 15px var(--shadow-dark),
+    -3px -3px 10px var(--shadow-light);
+}
+
+/* Form Inputs */
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.row label {
+  width: 120px;
+  font-weight: 500;
+}
+
+.row input,
+.row select {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #d1d1d1;
+  font-size: 15px;
+  transition: 0.25s;
+}
+
+.row input:focus,
+.row select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 6px rgba(75, 91, 253, 0.3);
+  outline: none;
+}
+
+/* ---------------- BUTTONS ---------------- */
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+#submitBtn {
+  background: var(--primary);
+  color: white;
+}
+
+#submitBtn:hover {
+  background: var(--primary-dark);
+}
+
+#resetBtn {
+  background: #e0e0e0;
+}
+
+#resetBtn:hover {
+  background: #cacaca;
+}
+
+/* ---------------- TABLE SECTION ---------------- */
+.table-section {
+  margin-top: 40px;
+}
+
+/* Search box */
+#search {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  transition: 0.25s;
+}
+
+#search:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 6px rgba(75, 91, 253, 0.3);
+  outline: none;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    8px 8px 20px var(--shadow-dark),
+    -5px -5px 15px var(--shadow-light);
+}
+
+th {
+  background: var(--primary);
+  color: white;
+  padding: 12px;
+  font-size: 15px;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 14px;
+}
+
+tr:hover {
+  background: #f7f8ff;
+}
+
+/* Action buttons inside table */
+.small-btn {
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: 0.25s;
+}
+
+.edit {
+  background: #ffe680;
+}
+
+.edit:hover {
+  background: #ffd950;
+}
+
+.delete {
+  background: #ff6b6b;
+  color: white;
+}
+
+.delete:hover {
+  background: #ff4c4c;
+}

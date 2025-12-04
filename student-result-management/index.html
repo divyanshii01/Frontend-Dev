@@ -1,0 +1,79 @@
+<!doctype html>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Student Result Management</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main class="container">
+<h1>Student Result Management</h1>
+
+
+<section class="form-section">
+<form id="studentForm">
+<input type="hidden" id="studentId" />
+
+
+<div class="row">
+<label>Name</label>
+<input id="name" required />
+</div>
+
+
+<div class="row">
+<label>Section</label>
+<select id="section">
+<option value="A">A</option>
+<option value="B">B</option>
+<option value="C">C</option>
+</select>
+</div>
+
+
+<div class="row">
+<label>Maths</label>
+<input id="maths" type="number" min="0" max="100" required />
+</div>
+<div class="row">
+<label>Science</label>
+<input id="science" type="number" min="0" max="100" required />
+</div>
+<div class="row">
+<label>English</label>
+<input id="english" type="number" min="0" max="100" required />
+</div>
+
+
+<div class="buttons">
+<button type="submit" id="submitBtn">Save Student</button>
+<button type="button" id="resetBtn">Reset</button>
+</div>
+</form>
+</section>
+
+
+<section class="table-section">
+<h2>Students</h2>
+<input id="search" placeholder="Search by name or section" />
+<table id="studentsTable">
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Section</th>
+<th>Maths</th>
+<th>Science</th>
+<th>English</th>
+<th>Total</th>
+<th>Average</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</section>
+</main>
+
+
+<script src="app.js"></script>
+</body>
+</html>
